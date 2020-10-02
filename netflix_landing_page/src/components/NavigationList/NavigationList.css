@@ -1,0 +1,13 @@
+.NavigationItems {
+    list-style: None;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+}
+
+.NavigationItem {
+    padding: 0 10px;
+}
