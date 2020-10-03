@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import classes from './Logo.css';
 // Logo
 class Logo extends Component{
 	render() {
 		return (
-			<div id="logo" className="Logo">
+			<div id="logo" className={classes.Logo}>
 				<svg version="1.1" width="300" height="81.386726" id="svg3262">
 					<g transform="translate(-384.28572,-428.81172)" id="layer1">
 						<g transform="matrix(2.5445375,0,0,2.5445375,1157.1714,-1457.8678)" id="g3235">
