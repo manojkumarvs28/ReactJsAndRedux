@@ -1,0 +1,31 @@
+.Modal {
+    width: 200px ;
+    height: 200px;
+    background-color: #3E363F ;
+    border-radius: 2px;
+    margin: auto;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+}
+
+.form{
+    margin-top: 30px;
+}
+
+.btn {
+    margin: 10px;
+    background: red;
+    color:white;
+    padding: 10px 9px 10px 11px;
+    text-transform: uppercase;
+    width: 88%;
+    font-family: "Lato", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+}

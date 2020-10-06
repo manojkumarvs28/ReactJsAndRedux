@@ -1,0 +1,23 @@
+.Input {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+
+.Input .input {
+    font-size: 14px;
+    font-weight: 300;
+    font-family:Arial, Helvetica, sans-serif;
+    background: transparent;
+    color: #FFFCE8;
+    outline: none;
+    border-width: 0 0 2px;
+    border-color: grey;
+}
+
+/* .input:focus {
+    border-color: blue;
+} */
