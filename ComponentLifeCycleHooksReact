@@ -1,0 +1,50 @@
+Component Creation lifecycleHooks
+
+constructor - basic initialization. Have to call super(props) . Can set the state in here.
+Avoid anything that slows loading of components or reduces performance or that causes unneccesary rerendering of components
+
+getDerivedStateFromProps(props,state) -> whenerver props are initiliazed for first time or whenever they change, we can sync the
+state via this method.
+Avoid causing sideEffects as in the case of constructor
+
+render method - return the JSX code -> Avoid anything that blocks rendering process like sending httpRequests, setTimeOut
+
+Render Child components and there respective lifecycle hooks
+
+componentWillMount (Deprecated) - Just before mounting the component . May be this can be used to set the state using props
+or check the state condition which can be handled by getDerivedStateFromProps or constructor itself now.
+
+componentDidMount - can cause sideEffects.Typical lifecycleHook to make httpRequests or any asynchronous actions
+Avoid updating state here synchronously but can update state in aysnc call response blocks like for example promise then block.
+because those synchronous calls will cause unneccesary render cycles.
+
+
+Component updating lifecycleHooks
+getDerivedStateFromProps(props,state) - initialize/re-initilaize the state of the component based on the props we get in component.
+Dont cause sideEffects.
+
+shouldComponentUpdate(nextProps, nextState) - Will allow to cancel the updating process.
+
+render - constructor JSX code and then contructas virtual DOM
+
+Update all the child components.
+
+getSnapShotBeforeUpdate(prevProps,prevState) - get the snapshot or copy of props and state before updating the component.
+Used for Last minute DOM ops,Dont cause sideEffects.
+
+componentDidUpdate - signals that component is updated, that render method has been executed. Can cause sideEffects.
+Dont update state in synchronous way, as that may cause infinite loop . But can be updated in result of async operations like then block.
+
+
+Use {} curly braces when -> Javascript code inside JSX
+
+Other Topics
+1.useEffect,useState, shouldComponentUpdate vs React.memo
+2.Auxilary Components.-> Aux, React.Fragment
+3.PureComponents
+4.PropTypes
+5. using classes for importing css. -> extract the project and changing the config files(prod and dev config files)
+6. Refs in class as well as functional components.
+7.context,useContext, using context in JSX code as well as other parts of component.
+8.Routing, Links, NavLinks, activeClassName, activeStyle, Switch, Router , withContext , passing and retriving params and
+QueryParams, props.history, location, match, guards using props

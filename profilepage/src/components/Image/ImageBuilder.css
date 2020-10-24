@@ -1,0 +1,13 @@
+.Image {
+    width: 50vw;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 980px) {
+    .Image {
+        width: 100vw;
+        height: 70vh;
+    }
+}

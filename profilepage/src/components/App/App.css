@@ -1,0 +1,15 @@
+@import 'https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto';
+
+.App {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Roboto';
+  display: flex;
+}
+
+@media screen and (max-width: 980px) {
+  .App {
+    flex-direction: column; } }
