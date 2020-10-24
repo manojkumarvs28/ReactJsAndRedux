@@ -1,0 +1,42 @@
+.Image {
+    height: 90%;
+    width: 90%;
+    background-size: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    background-position: center;
+    position: relative;
+    transition: filter .125s ease; 
+}
+
+.Image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: grey;
+    transition: filter .25s ease .25s; 
+}
+
+.Image::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .3;
+}
+
+.Image::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    mix-blend-mode: overlay;
+    left: 0;
+    z-index: 3;
+    content: '';
+}

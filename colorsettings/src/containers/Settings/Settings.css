@@ -1,0 +1,89 @@
+.Settings {
+    width: 90vw;
+  height: 90vh;
+  position: relative;
+  z-index: 2;
+}
+
+.MainWrapper {
+  display: flex;
+  width: 100%;
+  height: 85%;
+}
+
+.MainWrapper .Sidebar {
+    width: 30%;
+    max-width: 350px;
+    height: 100%;
+    background: rgba(46, 56, 79, 0.85);
+}
+
+.Sidebar .Title {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .2em;
+    font-size: 12px; 
+}
+
+@media screen and (max-width: 880px) {
+    .MainWrapper .Sidebar {
+      display: none; 
+    } 
+ }
+
+ .MainWrapper .ImageContainer {
+    width: 50%;
+    background: rgba(28, 34, 47, 0.5);
+    display: flex;
+    flex: 1 0 auto; 
+ }
+
+ .MainWrapper .ImageContainer .Filter {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center; 
+  }
+
+.FilterList {
+     display: flex;
+     width: 100%;
+     height: calc(15% - 10px);
+     background: rgba(46, 56, 79, 0.45);
+     box-sizing: border-box;
+     padding: 20px;
+     overflow-x: auto;
+ }
+
+ .FilterList .Filter {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    flex: 1 0 1;
+    margin-right: 20px;
+    background: grey;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+    transition: box-shadow .25s ease, transform .25s ease; 
+}
+
+.FilterList .Filter:hover {
+    cursor: pointer;
+    box-shadow: 0 10px 20px -10px black;
+    transform: scale(1.1); 
+}
+.FilterList .Filter:last-child {
+    margin-right: 0px; 
+}
+
+.FilterList .Filter .name{
+    color: red !important;
+    position: relative;
+    bottom: 10px;
+    left: 70px;
+    z-index:2;
+}

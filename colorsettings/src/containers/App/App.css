@@ -1,0 +1,27 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
+.App {
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  font-weight: 300;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  background: #252D3F;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0; 
+}
+
+.ImageBG {
+  position: absolute;
+  top: -5vh;
+  left: -5vw;
+  width: 110vw;
+  height: 110vh;
+  background-size: cover;
+  filter: blur(15px);
+  opacity: 1;
+  mix-blend-mode: multiply; 
+}
