@@ -1,0 +1,53 @@
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+body {
+  background: #EBEBEB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Share Tech Mono'; 
+}
+
+.App {
+  height: 400px;
+  width: 300px;
+  background: #EBEBEB;
+  position: relative; 
+  transform: scale(0.8) rotateX(45deg) rotateZ(45deg);
+  transition: transform .5s ease .5s;
+}
+
+.App:hover {
+  transform: scale(1.5) rotateX(0) rotateZ(0);
+}
+
+.App::before {
+    position: absolute;
+    content: '';
+    background: #bdc7b7;
+    transform: skewX(45deg);
+    transition: transform .5s ease .5s, height .5s ease .5s, opacity .5s ease .5s;
+    width: 100%;
+    height: 10px;
+    top: 100%;
+    left: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 1px;
+}
+
+.App::after {
+  position: absolute;
+  content: '';
+  background: #d7ddd3;
+  transform: skewY(45deg);
+  transition: transform .5s ease .5s, width .5s ease .5s, opacity .5s ease .5s;
+  width:10px;
+  height:100%;
+  bottom: -5px;
+  left: 100%;
+  opacity: 1;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 1px;
+}
