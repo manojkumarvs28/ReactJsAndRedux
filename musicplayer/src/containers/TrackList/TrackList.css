@@ -1,0 +1,44 @@
+.TrackList{
+    width: 280px;
+    height: 120px;
+    background: #4a293a;
+    overflow-y: auto;
+    position:relative;
+}
+
+.TrackList li {
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.TrackList li:hover, .TrackList li.selected{
+  background: #39202d;
+  cursor: pointer;
+  color:#D90368;
+}
+
+.TrackList li:hover .duration{
+    opacity: 1;
+}
+
+.number {
+
+}
+ol, ul {
+	list-style: none;
+}
+.title {
+    margin-left: 10px;
+    font-weight: 500;
+    letter-spacing: .12em;
+}
+
+.duration {
+    margin-left: auto;
+    opacity: .25;
+}
